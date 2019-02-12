@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/bootstrap.css">
+
+</head>
+<body>
+    <div id="head" class="row">
+        <div class="col">header</div>
+    </div>
+    <div id="content" class="row">
+        <div class="col">left</div>
+        <div id="centerContent" class="col-8">
+            <div class="row h- justify-content-center">
+                <button type="button" class="btn btn-success">PLAY</button>
+            </div>
+            <div class="row justify-content-center">
+                <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                    <label id="btn1" class="btn btn-secondary">
+                        <input type="radio" name="options" id="option1" autocomplete="off" > low
+                    </label>
+                    <label id="btn2" class="btn btn-secondary active">
+                        <input type="radio" name="options" id="option2" autocomplete="off"> medium
+                    </label>
+                    <label id="btn3" class="btn btn-secondary">
+                        <input type="radio" name="options" id="option3" autocomplete="off"> hard
+                    </label>
+                </div>
+            </div>
+        </div>
+        <div class="col">right</div>
+    </div>
+    <div id="foot" class="row">
+        <div class="col">footer</div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>

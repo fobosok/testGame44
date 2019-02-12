@@ -1,0 +1,18 @@
+body div{
+    border: 1px solid black;
+}
+#head{
+    height: 15vh;
+    margin: 0;
+}
+#content{
+    height: 70vh;
+    margin: 0;
+}
+#centerContent{
+    margin-top: 25vh;
+}
+#foot{
+    height: 15vh;
+    margin: 0;
+}
