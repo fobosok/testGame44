@@ -12,6 +12,7 @@ $(document).ready(() => {
             }
         }
     });
+    alert('test');
     // function shuffle(array) {
     //     let currentIndex = array.length, temporaryValue, randomIndex;
     //
