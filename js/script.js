@@ -61,7 +61,7 @@ $(document).ready(() => {
         $('#buttonsGroup').remove();
         for (let i = 0; i < numb; i++)
         {
-            // alert(numb);
+            alert(numb);
             $('body>#content>#centerContent').append(`<button id = "${array[i]}" type="button" class="btn btn-dark btn-circle">${array[i]}</button>`);
         }
     }
