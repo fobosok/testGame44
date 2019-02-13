@@ -1,6 +1,21 @@
-body div{
-    border: 1px solid black;
+body{
+
 }
+body div{
+    /*border: 1px solid black;*/
+}
+.btn{
+    transition: 0.5s;
+}
+.btn-circle {
+    border-radius: 50%;
+    text-align: center;
+    padding-left: 0;
+    padding-right: 0;
+    font-size: 16px;
+    white-space: normal;
+}
+
 #head{
     height: 15vh;
     margin: 0;
@@ -12,7 +27,17 @@ body div{
 #centerContent{
     margin-top: 25vh;
 }
+#play{
+    margin-bottom: 2vh;
+}
 #foot{
     height: 15vh;
     margin: 0;
+}
+.difficultyMedium{
+    display: grid;
+    grid-template-columns: repeat(5,25vh);
+    grid-template-rows: repeat(5,13vh);
+    grid-gap: 1vh;
+    font-family: 'Dancing Script', cursive;
 }

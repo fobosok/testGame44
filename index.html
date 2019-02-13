@@ -3,26 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <link href="https://fonts.googleapis.com/css?family=Dancing+Script" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/bootstrap.css">
 
 </head>
 <body>
     <div id="head" class="row">
-        <div class="col">header</div>
+        <div class="col"></div>
     </div>
     <div id="content" class="row">
-        <div class="col">left</div>
+        <div class="col"></div>
         <div id="centerContent" class="col-8">
-            <div class="row h- justify-content-center">
-                <button type="button" class="btn btn-success">PLAY</button>
+            <div id="playDiv" class="row h- justify-content-center">
+                <button id="play" type="button" disabled class="btn btn-primary">PLAY</button>
             </div>
-            <div class="row justify-content-center">
+            <div id="buttonsGroup" class="row justify-content-center">
                 <div class="btn-group btn-group-toggle" data-toggle="buttons">
                     <label id="btn1" class="btn btn-secondary">
                         <input type="radio" name="options" id="option1" autocomplete="off" > low
                     </label>
-                    <label id="btn2" class="btn btn-secondary active">
+                    <label id="btn2" class="btn btn-secondary">
                         <input type="radio" name="options" id="option2" autocomplete="off"> medium
                     </label>
                     <label id="btn3" class="btn btn-secondary">
@@ -31,10 +32,10 @@
                 </div>
             </div>
         </div>
-        <div class="col">right</div>
+        <div class="col"></div>
     </div>
     <div id="foot" class="row">
-        <div class="col">footer</div>
+        <div class="col"></div>
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="js/script.js"></script>

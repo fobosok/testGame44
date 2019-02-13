@@ -1,41 +1,72 @@
 $(document).ready(() => {
     let difficulty = 0;
     let arrParents = $.makeArray($('.btn-secondary'));
+    let centerContent = $('#centerContent');
+    let array = [];
     $('input').on('click',()=>{
         $(event.target).parent().addClass('active');
-        alert($(event.target).attr('id'));
+        $('#play').removeAttr('disabled');
         for(let i = 0; i < arrParents.length;i++)
         {
             if($(event.target).parent().attr('id') !== arrParents[i].id)
             {
                 $(arrParents[i]).removeClass('active');
             }
+            else
+            {
+                difficulty = i+1;
+            }
         }
     });
-    alert('test');
-    // function shuffle(array) {
-    //     let currentIndex = array.length, temporaryValue, randomIndex;
-    //
-    //     while (0 !== currentIndex) {
-    //
-    //         randomIndex = Math.floor(Math.random() * currentIndex);
-    //         currentIndex -= 1;
-    //
-    //         temporaryValue = array[currentIndex];
-    //         array[currentIndex] = array[randomIndex];
-    //         array[randomIndex] = temporaryValue;
-    //     }
-    //     return array;
-    // }
-    //
-    // let arr = [];
-    // for (let i = 0; i < 36; i++) {
-    //     arr.push(i);
-    // }
-    // shuffle(arr);
-    // for (let i = 0; i < 36; i++) {
-    //     $('body>.container').append(`<button id = "${arr[i]}" type="button" class="btn btn-dark btn-circle">${arr[i]}</button>`);
-    // }
+    $('#play').on('click',()=>{
+        switch(difficulty)
+        {
+            case(1):
+                centerContent.addClass('difficultyLow');
+                initializationFunction(16);
+                break;
+            case(2):
+                centerContent.addClass('difficultyMedium');
+                initializationFunction(25);
+                break;
+            case(3):
+                centerContent.addClass('difficultyHard');
+                initializationFunction(36);
+                break;
+        }
+    });
+    function shuffle(array)
+    {
+        let currentIndex = array.length, temporaryValue, randomIndex;
+
+        while (0 !== currentIndex)
+        {
+            randomIndex = Math.floor(Math.random() * currentIndex);
+            currentIndex -= 1;
+            temporaryValue = array[currentIndex];
+            array[currentIndex] = array[randomIndex];
+            array[randomIndex] = temporaryValue;
+        }
+        return array;
+    }
+    function initializationFunction(numb)
+    {
+        for (let i = 0; i < numb; i++)
+        {
+            array.push(i);
+        }
+        shuffle(array);
+        centerContent.css('margin-top',0);
+        $('#playDiv').remove();
+        $('#buttonsGroup').remove();
+        for (let i = 0; i < numb; i++)
+        {
+            // alert(numb);
+            $('body>#content>#centerContent').append(`<button id = "${array[i]}" type="button" class="btn btn-dark btn-circle">${array[i]}</button>`);
+        }
+    }
+
+
     // let counter = 4;
     // let timerId;
     // $('.container :input').prop('disabled',true);
