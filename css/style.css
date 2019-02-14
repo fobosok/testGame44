@@ -6,14 +6,13 @@ body div{
 }
 .btn{
     transition: 0.5s;
+
 }
 .btn-circle {
     border-radius: 50%;
     text-align: center;
     padding-left: 0;
     padding-right: 0;
-    font-size: 16px;
-    white-space: normal;
 }
 
 #head{
@@ -36,8 +35,39 @@ body div{
 }
 .difficultyMedium{
     display: grid;
-    grid-template-columns: repeat(5,25vh);
+    grid-template-columns: repeat(5,12vw);
     grid-template-rows: repeat(5,13vh);
+    grid-gap: 5px;
+    font-family: 'Dancing Script', cursive;
+    justify-content: center;
+}
+.difficultyLow{
+    display: grid;
+    margin-top: 0;
+    grid-template-columns: repeat(4,12vw);
+    grid-template-rows: repeat(4,13vh);
     grid-gap: 1vh;
     font-family: 'Dancing Script', cursive;
+    justify-content: center;
+}
+.difficultyHard{
+    display: grid;
+    grid-template-columns: repeat(6,10vw);
+    grid-template-rows: repeat(6,10vh);
+    grid-gap: 1vh;
+    font-family: 'Dancing Script', cursive;
+    justify-content: center;
+}
+#restartBtnDiv{
+    justify-content: center;
+}
+#Time{
+padding-left: 4vw;
+}
+#Errors{
+    padding-left: 3.66vw;
+}
+#leftContent
+{
+    visibility: hidden;
 }

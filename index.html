@@ -13,7 +13,24 @@
         <div class="col"></div>
     </div>
     <div id="content" class="row">
-        <div class="col"></div>
+        <div id="leftContent" class="col">
+            <div class="card card-body bg-light">
+                <div class="control">
+                    <div id="restartBtnDiv" class="row">
+                        <button id="restartBtn" type="button" class="btn btn-warning">Restart</button>
+                    </div>
+                    <br>
+                    <div class="timeDiv">
+                        <span id="timeLogo">Time :</span>
+                        <span id="Time">0</span>
+                    </div>
+                    <div class="ErrorsDiv">
+                        <span id="ErrorLogo">Errors :</span>
+                        <span id="Errors">0</span>
+                    </div>
+                </div>
+            </div>
+        </div>
         <div id="centerContent" class="col-8">
             <div id="playDiv" class="row h- justify-content-center">
                 <button id="play" type="button" disabled class="btn btn-primary">PLAY</button>
